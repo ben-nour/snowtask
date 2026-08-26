@@ -1,5 +1,12 @@
 <h1 align=center> ❄️snowtask❄️ </h2>
 
+
+<p align="center">
+     <a href="https://github.com/ben-nour/snowtask/actions/workflows/tests.yml"><img src="https://github.com/ben-nour/snowtask/actions/workflows/tests.yml/badge.svg"                 alt="Testing"></a>
+     <a href="https://github.com/ben-nour/snowtask/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/snowtask" alt="License"></a>
+     <a href="https://codecov.io/gh/ben-nour/snowtask" >  <img src="https://codecov.io/gh/ben-nour/snowtask/graph/badge.svg?token=QXXI04AMII"/> </a>
+</p>
+
 `snowtask` is a TUI for viewing information about your [Snowflake Tasks](https://docs.snowflake.com/en/user-guide/tasks-intro).
 
 ## Installation
