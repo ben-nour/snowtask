@@ -3,11 +3,12 @@
 
 <p align="center">
      <a href="https://github.com/ben-nour/snowtask/actions/workflows/tests.yml"><img src="https://github.com/ben-nour/snowtask/actions/workflows/tests.yml/badge.svg"                 alt="Testing"></a>
-     <a href="https://github.com/ben-nour/snowtask/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/snowtask" alt="License"></a>
      <a href="https://codecov.io/gh/ben-nour/snowtask" >  <img src="https://codecov.io/gh/ben-nour/snowtask/graph/badge.svg?token=QXXI04AMII"/> </a>
 </p>
 
-`snowtask` is a TUI for viewing information about your [Snowflake Tasks](https://docs.snowflake.com/en/user-guide/tasks-intro).
+`snowtask` is a TUI for viewing information about your [Snowflake Tasks](https://docs.snowflake.com/en/user-guide/tasks-intro):
+
+https://github.com/user-attachments/assets/1e008c41-a742-420e-b435-2fb31642c529
 
 ## Installation
 
