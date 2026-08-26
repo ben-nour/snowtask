@@ -1,0 +1,60 @@
+[project]
+name = "snowtask"
+version = "0.1.0"
+description = "A TUI for inspecting your Snowflake Tasks"
+authors = [
+    {name = "Ben Nour"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "textual (>=8.2.8,<9.0.0)",
+    "rich-argparse (>=1.8.0,<2.0.0)",
+    "pyyaml (>=6.0.3,<7.0.0)",
+    "snowflake-connector-python (>=4.7.2,<5.0.0)"
+]
+
+[dependency-groups]
+dev = [
+    "snowflake-connector-python (>=4.7.2,<5.0.0)",
+    "pytest (>=9.1.1,<10.0.0)",
+    "pyyaml (>=6.0.3,<7.0.0)",
+    "textual (>=8.2.8,<9.0.0)",
+    "pytest-asyncio (>=1.4.0,<2.0.0)",
+    "rich-argparse (>=1.8.0,<2.0.0)",
+    "coverage (>=7.15.4,<8.0.0)",
+    "ruff (>=0.16.4,<0.17.0)",
+    "pre-commit (>=4.6.2,<5.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "C",  # mccabe rules
+    "F",  # pyflakes rules
+    "E",  # pycodestyle error rules
+    "W",  # pycodestyle warning rules
+    "B",  # flake8-bugbear rules
+    "I",  # isort rules
+]
+ignore = [
+   "C901",  # max-complexity-10
+   "E501",  # line-too-long
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.coverage.run]
+omit = [
+    "snowtask/database.py",
+]
