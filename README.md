@@ -6,7 +6,7 @@
      <a href="https://codecov.io/gh/ben-nour/snowtask" >  <img src="https://codecov.io/gh/ben-nour/snowtask/graph/badge.svg?token=QXXI04AMII"/> </a>
 </p>
 
-`snowtask` is a TUI for viewing information about your [Snowflake Tasks](https://docs.snowflake.com/en/user-guide/tasks-intro):
+`snowtask` is a TUI for inspecting your [Snowflake Tasks](https://docs.snowflake.com/en/user-guide/tasks-intro):
 
 https://github.com/user-attachments/assets/1e008c41-a742-420e-b435-2fb31642c529
 
