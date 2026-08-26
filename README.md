@@ -1,8 +1,6 @@
 <h1 align=center> ❄️snowtask❄️ </h2>
 
-`snowtask` is a TUI for viewing information about your [Snowflake Tasks](https://docs.snowflake.com/en/user-guide/tasks-intro):
-
-<video src="docs/demo.mp4" controls width="800"></video>
+`snowtask` is a TUI for viewing information about your [Snowflake Tasks](https://docs.snowflake.com/en/user-guide/tasks-intro).
 
 ## Installation
 
