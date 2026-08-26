@@ -15,6 +15,9 @@ dependencies = [
     "snowflake-connector-python (>=4.7.2,<5.0.0)"
 ]
 
+[project.scripts]
+snowtask = "snowtask.main:main"
+
 [dependency-groups]
 dev = [
     "snowflake-connector-python (>=4.7.2,<5.0.0)",
