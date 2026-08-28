@@ -79,7 +79,6 @@ class TaskTable(DataTable):
         """
         self.loading = True
         current_rows = [self.get_row(row.key) for row in self.ordered_rows]
-        self.unfiltered_rows = current_rows
         # Filter data:
         pattern = filter_details.regex_pattern
         filtered_rows = [

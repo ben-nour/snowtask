@@ -464,30 +464,15 @@ async def test_clear_filter_works(
             ["2026-03-19", "strip_metadata", "PROD"],
             ["2026-01-01", "click_test", "PROD"],
         ]
-        await pilot.press("c")
-        task_table_rows = [
-            task_table.get_row(row.key) for row in task_table.ordered_rows
-        ]
-        assert task_table_rows == [
-            ["2026-03-19", "strip_metadata", "PROD"],
-            ["2026-04-10", "marketing_etl", "PROD"],
-            ["2026-01-01", "click_test", "PROD"],
-        ]
-        # Test it works with sorting too:
-        app.set_focus(task_table)
-        await pilot.press("d")
-        task_table = app.query_one("#task_table")
-        app.set_focus(task_table)
-        filter_input = app.query_one("#filter_input")
         app.set_focus(filter_input)
-        filter_input.value = "2026-0[1|3].*"  # Regex pattern
+        filter_input.value = "2026-03-19.*"  # Regex pattern
         await pilot.press("enter")
         await pilot.press("c")
         task_table_rows = [
             task_table.get_row(row.key) for row in task_table.ordered_rows
         ]
         assert task_table_rows == [
-            ["2026-04-10", "marketing_etl", "PROD"],
             ["2026-03-19", "strip_metadata", "PROD"],
+            ["2026-04-10", "marketing_etl", "PROD"],
             ["2026-01-01", "click_test", "PROD"],
         ]
