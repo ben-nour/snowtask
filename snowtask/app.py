@@ -186,6 +186,14 @@ class SnowTask(App):
         """Switch to a new tab."""
         self.query_one(Tabs).action_next_tab()
 
+    def key_enter(self):
+        """
+        Focus on TaskTable in view when Enter key pressed.
+        """
+        if active_pane := self.query_one(TabbedContent).active_pane:
+            active_table = active_pane.query_one(TaskTable)
+            self.set_focus(active_table)
+
     def action_show_filter_input(self) -> None:
         """
         Show/hide the FilterInput widget.

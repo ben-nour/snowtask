@@ -476,3 +476,24 @@ async def test_clear_filter_works(
             ["2026-04-10", "marketing_etl", "PROD"],
             ["2026-01-01", "click_test", "PROD"],
         ]
+
+
+async def test_enter_key(
+    monkeypatch, dummy_database, valid_task_data, valid_task_history_data
+):
+    """
+    Test that pressing the Enter key focuses the app on the TaskTable in view.
+    """
+    mock_get_tasks_method = Mock(return_value=valid_task_data)
+    mock_get_task_history_method = Mock(return_value=valid_task_history_data)
+    monkeypatch.setattr(dummy_database, "get_tasks", mock_get_tasks_method)
+    monkeypatch.setattr(
+        dummy_database, "get_task_history", mock_get_task_history_method
+    )
+    app = SnowTask(database=dummy_database, user_preferences=ConfigPreferences())
+    async with app.run_test() as pilot:
+        app.set_focus(app.query_one("#task_table"))
+        await pilot.press("s")
+        await pilot.press("enter")
+        assert app.query_one(TabbedContent).active == "task_history"
+        assert isinstance(app.focused, TaskTable)
