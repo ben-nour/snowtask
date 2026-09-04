@@ -85,7 +85,7 @@ class TaskTable(DataTable):
             row
             for row in current_rows
             if row[filter_details.col_index]  # None objects break fullmatch()
-            if pattern.fullmatch(row[filter_details.col_index])
+            if pattern.fullmatch(str(row[filter_details.col_index]))
         ]
         if filtered_rows:  # Don't want to apply filtering if no rows match.
             self.clear()
