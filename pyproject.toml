@@ -1,6 +1,6 @@
 [project]
 name = "snowtask"
-version = "0.1.1"
+version = "0.1.2"
 description = "A TUI for inspecting your Snowflake Tasks"
 authors = [
     {name = "Ben Nour"}
