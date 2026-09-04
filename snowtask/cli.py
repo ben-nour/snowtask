@@ -23,7 +23,7 @@ def get_parser_args() -> dict:  # pragma: no cover
     Create the command-line parser and get arguments.
     """
     parser = argparse.ArgumentParser(
-        description="View your Snowflake Tasks from the commmand-line.",
+        description="Inspect your Snowflake Tasks from the commmand-line.",
         formatter_class=RichHelpFormatter,
     )
     parser.add_argument(
