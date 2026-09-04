@@ -166,7 +166,7 @@ class SnowTask(App):
         self.id = "app"
 
     def compose(self) -> ComposeResult:
-        yield Label("[#9B76C8][bold]SnowTask[/bold][/#9B76C8][#9B76C8 50%] 0.1.0")
+        yield Label("[#9B76C8][bold]SnowTask[/bold][/#9B76C8][#9B76C8 50%] 0.1.2")
         with TabbedContent(initial="tasks"):
             with TabPane("Tasks", id="tasks"):
                 yield TaskTable(id="task_table")
